@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>MyIIS</title>
+<img src="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <details open>
+    <summary class="card-title">Введите номера студентов или выберите группу</summary>
+      <textarea id="studentIds" rows="4" cols="50" placeholder="35350051, 35350119, ..."></textarea><br>
+  </details>
+      <label for="groupSelect">Группа:</label>
+      <select id="groupSelect">
+        <option value="">Не выбрано</option>
+        <option value="1">Группа 1</option>
+        <option value="2">Группа 2</option>
+        <option value="3">Группа 3</option>
+        <option value="4">Группа 4</option>
+        <option value="5">Группа 5</option>
+        <option value="0">Весь поток</option>
+      </select><br>
+
+      <button id="loadBtn" class="btn" onclick="loadRatings()">Получить статистику</button>
+</div>
+
+  
+  <div class="card">
+    <h3 class="card-title">Таблица оценок</h3>
+    <table class="table" id="resultsTable">
+      <thead><tr id="headerRow"><th>Студент</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button class="btn" onclick="downloadExcel()">Скачать Excel</button>
+    <button class="btn" onclick="downloadPDF()">Скачать PDF</button>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.5.28/dist/jspdf.plugin.autotable.min.js"></script>
+
+  <script src="./studentsInfo.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+</html>

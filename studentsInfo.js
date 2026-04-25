@@ -33,6 +33,23 @@ let studentsInfo = [
     {"id": 35350145, "shortName": "Шарафанович К.А.", "group": 1},
     // 4 group
     {"id": 35350095, "shortName": "Новак К.А.", "group": 4},
+    // 5 group
+    {"id": 35350006, "shortName": "Ануфриев Д. И.", "group": 5},
+    {"id": 35350015, "shortName": "Боровиков Е. С.", "group": 5},
+    {"id": 35350017, "shortName": "Брикун Д. С.", "group": 5},
+    {"id": 35350036, "shortName": "Данилов Д. И.", "group": 5},
+    {"id": 35350044, "shortName": "Есис Е. С.", "group": 5},
+    {"id": 35350050, "shortName": "Здор П. Ю.", "group": 5},
+    {"id": 35350052, "shortName": "Камышев С. В.", "group": 5},
+    {"id": 35350053, "shortName": "Караичева А. И.", "group": 5},
+    {"id": 35350069, "shortName": "Крисюк Е. С.", "group": 5},
+    {"id": 35350072, "shortName": "Лаптанович А. А.", "group": 5},
+    {"id": 35350094, "shortName": "Могилевец Д. Э.", "group": 5},
+    {"id": 35350100, "shortName": "Петушок А. С.", "group": 5},
+    {"id": 35350104, "shortName": "Поддерегин И. Е.", "group": 5},
+    {"id": 35350125, "shortName": "Стасюк Д. В.", "group": 5},
+    {"id": 35350128, "shortName": "Суровцев А. И.", "group": 5},
+    {"id": 35350134, "shortName": "Хорошко К. Н.", "group": 5},
     // 3 group
     {"id": 35350001, "shortName": "Абдулов А.А.", "group": 3},
     {"id": 35350002, "shortName": "Акулин Е.Р.", "group": 3},
@@ -41,30 +58,11 @@ let studentsInfo = [
     {"id": 35350012, "shortName": "Богданов Е.Д.", "group": 3},
     {"id": 35350016, "shortName": "Бочков А.А.", "group": 3},
     {"id": 35350019, "shortName": "Бусалов К.А.", "group": 3},
-    {
-        "id": 35350020,
-        "shortName": "Бутакова К.А.",
-        "group": 3
-    },
-    {
-        "id": 35350039,
-        "shortName": "Дергун Н.О.",
-        "group": 3
-    },
-    {
-        "id": 25350048,
-        "shortName": "Еленский А.А.",
-        "group": 3
-    },
-    {
-        "id": 35350045,
-        "shortName": "Желудович Ю.Г.",
-        "group": 3
-    },
-    {
-        "id": 35350063,
-        "shortName": "Кокош А.П.",
-        "group": 3
+    {"id": 35350020, "shortName": "Бутакова К.А.", "group": 3},
+    {"id": 35350039, "shortName": "Дергун Н.О.", "group": 3},
+    {"id": 25350048, "shortName": "Еленский А.А.", "group": 3},
+    {"id": 35350045, "shortName": "Желудович Ю.Г.", "group": 3},
+    {"id": 35350063, "shortName": "Кокош А.П.", "group": 3
     },
     {
         "id": 35350067,

@@ -1,12 +1,14 @@
 const subjectLabsConst = {
   "АВС": 3,
   "ВПО": 6,
-  "МДиСУБД": 6,
+  "МДиСУБД": 7,
   "ОИнфБ": 0, // 8
   "ОСиСП": 6,
   "СППР": 13,
   "СТРweb-пр": 4,
   "ФизК": 0,
+  "ИСОБ": 7,
+  "МТран": 5,
 };
 
 let subjectLabs = { ...subjectLabsConst };
@@ -28,26 +30,48 @@ function getIdsFromForm() {
 async function loadRatings() {
   let ids = getIdsFromForm(); 
   const btn = document.getElementById("loadBtn");
+  const errorLog = document.getElementById("errorLog");
 
   btn.disabled = true;
   btn.textContent = "Загрузка...";
+  errorLog.innerHTML = ""; 
 
   let promises = ids.map(id =>
     fetch(`https://iis.bsuir.by/api/v1/rating/studentRating?studentCardNumber=${id}`)
       .then(resp => {
-        if (!resp.ok) throw new Error('Ошибка при загрузке ID ${id}');
-        return resp.json()
-    })
+        if (!resp.ok) throw new Error(`Ошибка`);
+        return resp.json();
+      })
+      .then(data => ({ success: true, id: id, data: data }))
+      .catch(err => ({ success: false, id: id }))
   );
 
   subjectLabs = { ...subjectLabsConst };
 
-  cachedStudents = await Promise.all(promises);
+  let results = await Promise.all(promises);
+
+  let successfulStudents = [];
+  let successfulIds = [];
+  let failedIds = [];
+
+  results.forEach(res => {
+    if (res.success) {
+      successfulStudents.push(res.data);
+      successfulIds.push(res.id);
+    } else {
+      failedIds.push(res.id);
+    }
+  });
+
+  if (failedIds.length > 0) {
+    errorLog.innerHTML = `Не найдены или не загружены: ${failedIds.join(", ")}`;
+  }
 
   btn.disabled = false;
   btn.textContent = "Получить статистику";
 
-  cachedIds = ids;
+  cachedStudents = successfulStudents;
+  cachedIds = successfulIds;
   buildTable(cachedStudents, cachedIds);
 }
 

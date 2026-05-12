@@ -1,4 +1,3 @@
-// массив студентов
 let studentsInfo = [
     // 1 group
     {"id": 35350007, "shortName": "Бабицкий Д.В.", "group": 1},
@@ -121,7 +120,7 @@ let studentsInfo = [
     {"id": 35350142, "shortName": "Чуешов А. А.", "group": 4},
     {"id": 35350144, "shortName": "Шавейко К. В.", "group": 4},
     {"id": 35350150, "shortName": "Шилов А. В.", "group": 4},
-    {"id": 35350154, "shortName": "Щеперко П. С.", "group": 4}
+    {"id": 35350154, "shortName": "Щеперко П. С.", "group": 4},
     // 5 group
     {"id": 35350006, "shortName": "Ануфриев Д. И.", "group": 5},
     {"id": 35350015, "shortName": "Боровиков Е. С.", "group": 5},
